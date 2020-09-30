@@ -74,6 +74,8 @@ cp -a .%{gem_dir}/* \
 
 %files
 %dir %{gem_instdir}
+%exclude %{gem_instdir}/.tx
+%exclude %{gem_instdir}/gemfile.d
 %license %{gem_instdir}/LICENSE
 %{gem_instdir}/app
 %{gem_instdir}/config
@@ -158,6 +160,10 @@ cp -a .%{gem_dir}/* \
 
 * Wed Jan 12 2022 Lukas Zapletal <lzap+rpm@redhat.com> 19.0.1-1
 - Update to 19.0.1
+
+* Tue Jan 11 2022 Markus Bucher <bucher@atix.de> 18.0.0-2
+- Add proxmox-extension
+- Exclude gemfile.d, which is only needed for testing
 
 * Thu Dec 09 2021 Evgeni Golov 19.0.0-1
 - Update to 19.0.0-1
