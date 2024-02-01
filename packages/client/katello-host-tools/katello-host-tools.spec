@@ -151,7 +151,7 @@ pushd src
 %if %{dnf_install} || 0%{?suse_version} >= 1500
 %py3_build
 %else
-%if 0%{?rhel} == 6 || 0%{?suse_version} < 1500
+%if 0%{?rhel} == 6 || 0%{?suse_version} >= 1200
 %{__python} setup.py build
 %else
 %py_build
@@ -166,7 +166,7 @@ pushd src
 %if %{dnf_install} || 0%{?suse_version} >= 1500
 %py3_install
 %else
-%if 0%{?rhel} == 6 || 0%{?suse_version} < 1500
+%if 0%{?rhel} == 6 || 0%{?suse_version} >= 1200
 %{__python} setup.py install --root %{buildroot}
 %else
 %py_install
