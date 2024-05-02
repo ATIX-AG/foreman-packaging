@@ -74,6 +74,7 @@ cp -a .%{gem_dir}/* \
 %files
 %dir %{gem_instdir}
 %exclude %{gem_instdir}/.gitignore
+%exclude %{gem_instdir}/.gitlab-ci.yml
 %exclude %{gem_instdir}/.rubocop.yml
 %exclude %{gem_instdir}/.rubocop_todo.yml
 %exclude %{gem_instdir}/.travis.yml
