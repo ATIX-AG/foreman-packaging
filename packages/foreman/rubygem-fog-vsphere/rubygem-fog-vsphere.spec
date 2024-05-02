@@ -47,6 +47,12 @@ cp -a .%{gem_dir}/* \
 
 %files
 %dir %{gem_instdir}
+%exclude %{gem_instdir}/.github
+%exclude %{gem_instdir}/.gitignore
+%exclude %{gem_instdir}/.gitlab-ci.yml
+%exclude %{gem_instdir}/.rubocop.yml
+%exclude %{gem_instdir}/.rubocop_todo.yml
+%{gem_instdir}/Jenkinsfile
 %license %{gem_instdir}/LICENSE.md
 %{gem_libdir}
 %exclude %{gem_cache}
