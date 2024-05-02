@@ -57,6 +57,7 @@ find %{buildroot}%{gem_instdir}/bin -type f | xargs chmod a+x
 %exclude %{gem_instdir}/.bundle
 %exclude %{gem_instdir}/.github
 %exclude %{gem_instdir}/.gitignore
+%exclude %{gem_instdir}/.gitlab-ci.yml
 %exclude %{gem_instdir}/.rubocop.yml
 %exclude %{gem_instdir}/.rubocop_todo.yml
 %exclude %{gem_instdir}/.ruby-gemset
