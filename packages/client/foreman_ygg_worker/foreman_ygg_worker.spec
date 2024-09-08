@@ -9,7 +9,7 @@
 
 %global goipath         github.com/%{repo_orgname}/%{repo_name}
 
-%if 0%{?suse_version}
+%if 0%{?suse_version} || 0%{?amzn}
 %define gobuild(o:) GO111MODULE=off go build -buildmode pie -compiler gc -tags="rpm_crashtraceback ${BUILDTAGS:-}" -ldflags "${LDFLAGS:-} -linkmode=external -B 0x$(head -c20 /dev/urandom|od -An -tx1|tr -d ' \\n') -extldflags '-Wl,-z,relro -Wl,-z,now '" -a -v %{?**};
 %endif
 
