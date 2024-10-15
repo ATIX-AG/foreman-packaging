@@ -4,7 +4,7 @@
 %global dynflow_sidekiq_service_name dynflow-sidekiq@
 %global rake /usr/bin/rake
 
-%global release 2
+%global release 3
 
 Name:    foreman
 Version: 3.12.1
@@ -215,6 +215,7 @@ BuildRequires: rubygem(facter)
 Summary: Foreman CLI
 Group: Applications/System
 Requires: rubygem(hammer_cli_foreman)
+Provides: orcharhino-cli
 
 %description cli
 Meta Package to install hammer rubygems and its dependencies
@@ -880,6 +881,9 @@ exit 0
 %systemd_postun %{name}.socket
 
 %changelog
+* Wed Dec 11 2024 Maximilian Kolb <kolb@atix.de> - 3.12.1-3
+- Allow installing "hammer-cli" as "orcharhino-cli"
+
 * Thu Dec 05 2024 Markus Bucher <bucher@atix.de> - 3.12.1-2
 - Add profiling subpackage
 
