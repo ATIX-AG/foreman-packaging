@@ -236,6 +236,7 @@ BuildRequires: (npm(yup) >= 0.29.3 with npm(yup) < 1.0.0)
 Summary: Foreman CLI
 Group: Applications/System
 Requires: rubygem(hammer_cli_foreman)
+Provides: orcharhino-cli
 
 %description cli
 Meta Package to install hammer rubygems and its dependencies
