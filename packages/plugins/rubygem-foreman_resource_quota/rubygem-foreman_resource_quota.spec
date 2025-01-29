@@ -1,7 +1,7 @@
 # template: foreman_plugin
 %global gem_name foreman_resource_quota
 %global plugin_name resource_quota
-%global foreman_min_version 3.13
+%global foreman_min_version 3.12
 
 Name: rubygem-%{gem_name}
 Version: 0.3.1
