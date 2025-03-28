@@ -94,6 +94,10 @@ EOF
 %dir %{yggdrasil_libexecdir}
 %dir %{_root_sysconfdir}/yggdrasil
 %dir %{yggdrasil_worker_conf_dir}
+%dir %{_datadir}/dbus-1
+%dir %{_datadir}/dbus-1/system.d
+%dir %{_datadir}/dbus-1/system-services
+%dir %{_unitdir}
 %endif
 %{yggdrasil_libexecdir}/%{name}
 %{yggdrasil_worker_conf_dir}/foreman.toml
