@@ -64,6 +64,11 @@ mkdir -p _gopath/src
 cp -av $(pwd)/src _gopath/src/%{name}-%{version}
 ln -fs $(pwd)/vendor _gopath/src/%{name}-%{version}/vendor
 ln -fs $(pwd)/go.mod _gopath/src/%{name}-%{version}/go.mod
+
+%if 0%{?amzn}
+unset LDFLAGS
+%endif
+
 export GOPATH=$(pwd)/_gopath
 pushd _gopath/src/%{name}-%{version}
 %{gobuild}
@@ -89,6 +94,10 @@ EOF
 %dir %{yggdrasil_libexecdir}
 %dir %{_root_sysconfdir}/yggdrasil
 %dir %{yggdrasil_worker_conf_dir}
+%dir %{_datadir}/dbus-1
+%dir %{_datadir}/dbus-1/system.d
+%dir %{_datadir}/dbus-1/system-services
+%dir %{_unitdir}
 %endif
 %{yggdrasil_libexecdir}/%{name}
 %{yggdrasil_worker_conf_dir}/foreman.toml
