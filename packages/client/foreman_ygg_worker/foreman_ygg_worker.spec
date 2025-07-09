@@ -22,12 +22,6 @@ License: MIT
 Source0: https://github.com/%{repo_orgname}/%{repo_name}/releases/download/v%{version}/%{repo_name}-%{version}.tar.gz
 Url: https://github.com/%{repo_orgname}/%{repo_name}/
 
-# suse leap 15.5 doesn't define go_arches
-%if 0%{?suse_version}
-%define go_arches %{ix86} x86_64 %{arm} aarch64 ppc64le
-%endif
-ExclusiveArch: %{go_arches}
-
 BuildRequires: systemd-rpm-macros
 %if 0%{?suse_version}
 BuildRequires: go
