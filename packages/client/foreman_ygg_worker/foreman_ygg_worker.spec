@@ -56,11 +56,6 @@ mkdir -p _gopath/src
 cp -av $(pwd)/src _gopath/src/%{name}-%{version}
 ln -fs $(pwd)/vendor _gopath/src/%{name}-%{version}/vendor
 ln -fs $(pwd)/go.mod _gopath/src/%{name}-%{version}/go.mod
-
-%if 0%{?amzn}
-unset LDFLAGS
-%endif
-
 export GOPATH=$(pwd)/_gopath
 pushd _gopath/src/%{name}-%{version}
 %gobuild -o %{name}-%{version}
