@@ -18,14 +18,9 @@ Foreman SCAP client Puppet Module configures the client of the same name
 to run scans and upload results to foreman proxy.
 
 %prep
-%setup -qc
+%setup -qn %{puppet_full_name}-%{version}
 
 %build
-# ATIX: DROP files we don't want to package. This is required because we are
-# building the RPM from git src and not using the puppetforge module
-rm -f .fixtures.yml .puppet-lint.rc CONTRIBUTING.md Gemfile Rakefile .pmtignore .gitlab-ci.yml
-rm -fr .github
-rm -fr spec
 
 %install
 mkdir -p %{buildroot}/%{puppet_foreman_scap_client_dir}
@@ -33,12 +28,13 @@ cp -rp . %{buildroot}/%{puppet_foreman_scap_client_dir}/
 
 
 %files
-%doc NEWS README.md
+%doc NEWS README.md REFERENCE.md
 %license COPYING
 %dir %{puppet_foreman_scap_client_dir}
 %exclude %{puppet_foreman_scap_client_dir}/COPYING
 %exclude %{puppet_foreman_scap_client_dir}/NEWS
 %exclude %{puppet_foreman_scap_client_dir}/README.md
+%exclude %{puppet_foreman_scap_client_dir}/REFERENCE.md
 %{puppet_foreman_scap_client_dir}/metadata.json
 %{puppet_foreman_scap_client_dir}/lib
 %{puppet_foreman_scap_client_dir}/manifests
