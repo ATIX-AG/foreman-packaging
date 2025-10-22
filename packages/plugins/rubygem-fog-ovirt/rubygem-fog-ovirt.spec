@@ -3,7 +3,7 @@
 
 Name: rubygem-%{gem_name}
 Version: 2.0.3
-Release: 3%{?dist}
+Release: 2%{?dist}
 Summary: Module for the 'fog' gem to support Ovirt
 License: MIT
 URL: https://github.com/fog/fog-ovirt
@@ -46,11 +46,6 @@ cp -a .%{gem_dir}/* \
 
 %files
 %dir %{gem_instdir}
-%exclude %{gem_instdir}/.gitignore
-%exclude %{gem_instdir}/.gitlab-ci.yml
-%exclude %{gem_instdir}/.rubocop.yml
-%exclude %{gem_instdir}/.rubocop_todo.yml
-%exclude %{gem_instdir}/.travis.yml
 %license %{gem_instdir}/LICENSE.md
 %{gem_libdir}
 %exclude %{gem_cache}
@@ -64,9 +59,6 @@ cp -a .%{gem_dir}/* \
 %{gem_instdir}/spec
 
 %changelog
-* Thu Oct 16 2025 Maximilian Kolb - 2.0.3-3
-- Do not package git and CI files
-
 * Tue Aug 12 2025 Evgeni Golov - 2.0.3-2
 - Rebuild for plugins
 
