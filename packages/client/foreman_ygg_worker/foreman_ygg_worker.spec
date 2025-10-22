@@ -31,6 +31,7 @@ ExclusiveArch: %{go_arches}
 BuildRequires: systemd-rpm-macros
 %if 0%{?suse_version}
 BuildRequires: go
+BuildRequires: golang-packaging
 %else
 BuildRequires: golang
 %if 0%{?rhel} >= 9 || 0%{?fedora}
