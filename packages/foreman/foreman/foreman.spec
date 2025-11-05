@@ -7,7 +7,7 @@
 %global release 1
 
 Name:    foreman
-Version: 3.16.0
+Version: 3.16.1
 Release: %{?prerelease:0.}%{release}%{?prerelease:.}%{?prerelease}%{?nightly}%{?dist}
 Summary: Systems Management web application
 
@@ -1016,6 +1016,12 @@ exit 0
 %systemd_postun %{name}.socket
 
 %changelog
+* Wed Nov 05 2025 Ondřej Gajdušek <ogajduse@redhat.com> - 3.16.1-1
+- Release foreman 3.16.1
+
+* Wed Oct 01 2025 Frank Wall <github-oss-noreply@markt.de> - 3.16.0-2
+- Remove Obsoletes entry to fix migration to new ovirt plugin
+
 * Tue Sep 09 2025 Ondřej Gajdušek <ogajduse@redhat.com> - 3.16.0-1
 - Release foreman 3.16.0
 
