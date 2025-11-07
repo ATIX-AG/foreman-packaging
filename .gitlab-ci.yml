@@ -1,0 +1,26 @@
+---
+stages:
+  - lint
+
+variables:
+  GIT_DEPTH: 1
+
+lint_spec_files:
+  stage: lint
+  image: ${CI_REGISTRY}/hub/lint/rpm:main
+  script:
+    - set -eu
+    - rpmlint --version
+    - rpmlint packages/foreman/nodejs-monaco-editor-react/nodejs-monaco-editor-react.spec
+    - rpmlint packages/foreman/nodejs-patternfly-react-code-editor/nodejs-patternfly-react-code-editor.spec
+    - rpmlint packages/foreman/nodejs-ts-loader/nodejs-ts-loader.spec
+    - rpmlint packages/foreman/nodejs-types-node/nodejs-types-node.spec
+    - rpmlint packages/foreman/nodejs-types-react-helmet/nodejs-types-react-helmet.spec
+    - rpmlint packages/foreman/nodejs-types-react-redux/nodejs-types-react-redux.spec
+    - rpmlint packages/foreman/nodejs-types-react-router-dom/nodejs-types-react-router-dom.spec
+    - rpmlint packages/foreman/nodejs-types-react-router/nodejs-types-react-router.spec
+    - rpmlint packages/foreman/nodejs-types-react/nodejs-types-react.spec
+    - rpmlint packages/foreman/nodejs-typescript/nodejs-typescript.spec
+    - rpmlint packages/plugins/rubygem-foreman_ansible_director/rubygem-foreman_ansible_director.spec
+    - rpmlint packages/plugins/rubygem-smart_proxy_ansible_director/rubygem-smart_proxy_ansible_director.spec
+...
