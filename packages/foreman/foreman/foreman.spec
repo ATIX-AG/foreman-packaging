@@ -185,6 +185,7 @@ BuildRequires: (npm(sass) >= 1.60.0 with npm(sass) < 1.61.0)
 BuildRequires: (npm(sass-loader) >= 13.3.2 with npm(sass-loader) < 14.0.0)
 BuildRequires: (npm(style-loader) >= 1.3.0 with npm(style-loader) < 2.0.0)
 BuildRequires: (npm(webpack) >= 5.75.0 with npm(webpack) < 6.0.0)
+BuildRequires: (npm(ts-loader) >= 9.5.2 with npm(ts-loader) < 10.0.0)
 BuildRequires: (npm(webpack-cli) >= 5.0.1 with npm(webpack-cli) < 6.0.0)
 BuildRequires: (npm(webpack-stats-plugin) >= 1.0.3 with npm(webpack-stats-plugin) < 2.0.0)
 # end package.json devDependencies BuildRequires
