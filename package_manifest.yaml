@@ -492,6 +492,7 @@ foreman_nodejs_packages:
     nodejs-ts-loader:
       strategy: bundle
     nodejs-tslib: {}
+    nodejs-typescript: {}
     nodejs-unleash-proxy-client: {}
     nodejs-unleash-proxy-client-react: {}
     nodejs-unidiff: {}
