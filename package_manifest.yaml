@@ -896,6 +896,7 @@ foreman_proxy_other_plugin_packages_tier2:
   hosts:
     mosquitto: {}
     ansible-runner: {}
+    python-ansible-navigator: {}
     python-lockfile: {}
     ansible-core: {}
 
