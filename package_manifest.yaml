@@ -495,6 +495,7 @@ foreman_nodejs_packages:
       name: "@theforeman/vendor"
     nodejs-ts-loader: {}
     nodejs-tslib: {}
+    nodejs-typescript: {}
     nodejs-unleash-proxy-client: {}
     nodejs-unleash-proxy-client-react: {}
     nodejs-unidiff: {}

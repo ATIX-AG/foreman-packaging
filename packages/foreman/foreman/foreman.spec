@@ -4,7 +4,7 @@
 %global dynflow_sidekiq_service_name dynflow-sidekiq@
 %global rake /usr/bin/rake
 
-%global release 1
+%global release 2
 
 Name:    foreman
 Version: 3.16.2
@@ -186,6 +186,7 @@ BuildRequires: (npm(sass-loader) >= 13.3.2 with npm(sass-loader) < 14.0.0)
 BuildRequires: (npm(style-loader) >= 1.3.0 with npm(style-loader) < 2.0.0)
 BuildRequires: (npm(webpack) >= 5.75.0 with npm(webpack) < 6.0.0)
 BuildRequires: (npm(ts-loader) >= 9.5.2 with npm(ts-loader) < 10.0.0)
+BuildRequires: (npm(typescript) >= 5.8.2 with npm(typescript) < 6.0.0)
 BuildRequires: (npm(webpack-cli) >= 5.0.1 with npm(webpack-cli) < 6.0.0)
 BuildRequires: (npm(webpack-stats-plugin) >= 1.0.3 with npm(webpack-stats-plugin) < 2.0.0)
 # end package.json devDependencies BuildRequires
@@ -1017,6 +1018,9 @@ exit 0
 %systemd_postun %{name}.socket
 
 %changelog
+* Tue Jan 20 2026 Nadja Heitmann <nadjah@atix.de> - 3.16.2-2
+- Add basic Typescript packages
+
 * Tue Nov 25 2025 Patrick Creech <pcreech@redhat.com> - 3.16.2-1
 - Release foreman 3.16.2
 
