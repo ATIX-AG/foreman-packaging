@@ -659,6 +659,8 @@ nodejs_plugin_packages:
       strategy: bundle
     nodejs-types-react:
       strategy: bundle
+    nodejs-types-react-redux:
+      strategy: bundle
     nodejs-types-node:
       strategy: bundle
 
