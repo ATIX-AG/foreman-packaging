@@ -1,7 +1,7 @@
 # template: foreman_plugin
 %global gem_name foreman_ansible_director
 %global plugin_name ansible_director
-%global foreman_min_version 3.18
+%global foreman_min_version 3.16
 
 Name: rubygem-%{gem_name}
 Version: 0.3.4
