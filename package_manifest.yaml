@@ -656,6 +656,7 @@ foreman_plugin_packages_tier2:
   hosts:
     rubygem-foreman_acd: {}
     rubygem-foreman_ansible: {}
+    rubygem-foreman_ansible_director: {}
     rubygem-foreman_azure_rm: {}
     rubygem-foreman_bootdisk: {}
     rubygem-foreman_concrete: {}
