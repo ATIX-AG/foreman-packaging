@@ -707,6 +707,7 @@ foreman_plugin_packages_tier2:
     rubygem-foreman_wreckingball: {}
     rubygem-llhttp: {}
     rubygem-puppetdb_foreman: {}
+    rubygem-smart_proxy_ansible_director: {}
 
 fdi_plugin_packages:
   vars:
