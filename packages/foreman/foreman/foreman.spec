@@ -7,7 +7,7 @@
 %global release 2
 
 Name:    foreman
-Version: 3.16.2
+Version: 3.16.3
 Release: %{?prerelease:0.}%{release}%{?prerelease:.}%{?prerelease}%{?nightly}%{?dist}
 Summary: Systems Management web application
 
@@ -963,8 +963,11 @@ exit 0
 %systemd_postun %{name}.socket
 
 %changelog
-* Tue Jan 20 2026 Nadja Heitmann <nadjah@atix.de> - 3.16.2-2
+* Wed Apr 01 2026 Nadja Heitmann <nadjah@atix.de> - 3.16.3-2
 - Add basic Typescript packages
+
+* Thu Mar 26 2026 Ondřej Gajdušek <ogajduse@redhat.com> - 3.16.3-1
+- Release foreman 3.16.3
 
 * Tue Nov 25 2025 Patrick Creech <pcreech@redhat.com> - 3.16.2-1
 - Release foreman 3.16.2
